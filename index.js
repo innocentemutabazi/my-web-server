@@ -1,10 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 const app = express();
 const port = process.env.PORT || 3000;
 
-const apiKeyIpGeolocation = '1a14d98e72fa4e1fb6a4dcb61fe03c78';
-const apiKeyWeather = '11d2253f69a7ae27bd2a4b5e081783e9';
+const apiKeyIpGeolocation = process.env.IP_GEOLOCATION_API_KEY;
+const apiKeyWeather = process.env.WEATHER_API_KEY;
 
 app.get('/api/hello', async (req, res) => {
   const visitorName = req.query.visitor_name || 'Guest';
