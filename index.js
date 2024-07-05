@@ -4,8 +4,8 @@ const axios = require('axios');
 const app = express();
 const port = process.env.PORT || 3000;
 
-const apiKeyIpGeolocation = process.env.IP_GEOLOCATION_API_KEY;
-const apiKeyWeather = process.env.WEATHER_API_KEY;
+const apiKeyIpGeolocation = '9227217660f2407f9339d40c90217009';
+const apiKeyWeather = '11d2253f69a7ae27bd2a4b5e081783e9';
 
 app.get('/api/hello', async (req, res) => {
   const visitorName = req.query.visitor_name || 'Guest';
